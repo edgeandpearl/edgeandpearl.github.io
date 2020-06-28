@@ -1,0 +1,42 @@
+@keyframes jump {
+    0%, 100% {
+        margin-bottom: 0;
+    }
+    50% {
+        margin-bottom: 50px;
+    }
+}
+
+body {
+    margin: 0;
+}
+
+.page-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: darkgray;
+    position: relative;
+}
+
+.surface {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    background-color: azure;
+    opacity: 0.5;
+}
+
+.player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: darkcyan;
+    transition: left 200ms linear;
+}
+
+.player.jump {
+    animation: jump 1s;
+}
